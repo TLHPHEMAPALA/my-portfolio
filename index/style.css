@@ -1,0 +1,547 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Poppins',sans-serif;        
+    background-color: rgba(0,0,57,255);
+    background-position: center;    
+    padding:  30px 40px 30px 40px; 
+    
+}
+
+.header{
+   position:fixed;
+   top: 0;
+   left: 0;
+   padding:  30px 40px 30px 40px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;  
+   background:rgba(0,0,57,255);    
+}
+
+.header .sticky {
+    border-bottom: .1rem solid rgb(1, 12, 65);
+}
+
+.mylogo{
+    color: rgb(252, 0, 96);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;   
+}
+
+
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(255, 0, 96);
+    margin-left: 35px;
+    font-weight: 700;  
+    transition: .2s;          
+}
+
+.navbar.active{
+    display: block;
+}
+
+
+.navbar a:hover,
+.navbar a.home
+{
+    color: aliceblue;
+    
+}
+
+#menu-icon{
+    font-size: 3.2rem;
+    color: rgb(255, 0, 96);
+    display: none;
+}
+
+.home-page{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;        
+    background-size: 100%;
+}
+
+.home-content{
+   max-width: 600px;     
+}
+
+.home-content h1{
+    font-weight:bold;
+    color: white;    
+    font-size: 60px;     
+}
+
+.home-content h3{    
+    color: white;   
+}
+
+.home-content h4{    
+    color: rgb(104, 177, 241);
+    font-size: 25px;
+}
+
+.home-content p{
+    margin-top: 30px;
+    font-size: 15px;
+    color: white;
+}
+
+.home-image img{
+    margin-left: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 0, 128);
+    width: 25vw;
+}
+
+.social-media{
+    margin-top: 3rem;
+}
+
+.social-media a{   
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: transparent;
+    border:groove;
+    border-color: rgb(104, 177, 241);
+    color: rgb(104, 177, 241);
+    border-radius: 50%;
+    font-size:20px;
+    width:3rem;
+    height: 3rem;    
+    transition: .2s;
+    margin-left:5px;    
+}
+
+.social-media a:hover{
+    color:rgb(255, 0, 128) ;
+    border-color: rgb(255, 0, 128);
+    box-shadow: 0 0 1rem rgb(255, 255, 255) ;    
+}
+
+
+
+/*Services Css*/
+
+.services h1{   
+    margin-bottom: 60px;
+    color: white;
+    font-size: 50px;   
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+   
+ }
+ 
+ .services h3,p{   
+    color: white     
+   
+ }
+  
+.services-container{
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+} 
+
+.services-box{
+    flex: 1 1 30rem;
+    background: linear-gradient(to right, rgb(0, 8, 77), rgb(104, 4, 66),rgb(1, 12, 65));
+    padding:3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 3px solid rgb(104, 4, 66);
+    transition: .5s ease;
+    
+}
+
+.services-box:hover{
+    border-color:rgb(255, 0, 140) ;  
+    transform: scale(1.02);
+}
+
+
+.services-box i {
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+}
+
+
+.btn{
+    margin-top: 50px;
+    display: inline-block;
+    padding:5px 8px;
+    background: #ff0080;
+    border-radius: 6px;
+    box-shadow: 0 0 10 #ff0080 ;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.btn:hover{
+    background: #4e0229;
+    box-shadow: none;
+}
+
+ /*End Services Css*/
+
+
+/*Portfolio Css*/
+
+.portfolio h1{   
+    margin-top: 40px;
+    margin-bottom:40px;
+    color: white;
+    font-size: 50px;   
+    justify-content: center;
+    align-items: center;    
+    text-align: center;   
+}
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    border: 3px solid rgb(104, 4, 66);
+    overflow: hidden;    
+    display: flex;
+}
+
+.portfolio-box:hover{
+    border-color: rgb(255, 0, 128);
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);   
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    background: linear-gradient(rgba(0,0,0, .1),#4e0229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    transform: translateY(100%);
+    transition: .5s;
+}
+
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+    
+}
+
+.portfolio-layer h4{
+    font-size: 20px;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.portfolio-layer p{
+    font-size: 13px;
+    margin: 40px 30px 10px;
+}
+
+/*End Of The Portfolio Css*/
+
+
+/*Contact Me Css*/
+
+.contact h1{
+    margin-top: 40px;
+    margin-bottom:40px;
+    color: white;
+    font-size: 50px;   
+    justify-content: center;
+    align-items: center;    
+    text-align: center;  
+}
+
+.contact form{
+    max-width: 800px;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 20px;     
+}
+
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form  textarea {
+    width: 100%;
+    padding: 5px;
+    font-size:15px;
+    color:  rgb(255, 0, 96);
+    background:linear-gradient(rgba(0,0,0, .1),#4e0229);
+    border-color: rgb(255, 0, 128);
+    border-radius: 10px;
+    margin:.7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form  textarea {
+    resize: none;
+}
+
+.contact-btn{
+    margin-top: 20px;
+    display: inline-block;
+    padding:5px 8px;
+    background: #ff0080;
+    border-radius: 6px;
+    box-shadow: 0 0 10 #ff0080 ;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    border: 2px solid white;    
+}
+
+.contact-btn:hover{
+    background: #4e0229;
+    box-shadow: none;
+}
+
+/*End Of Contact Me Css*/
+
+
+/*Footer Css*/
+
+.footer{       
+    margin-top: 100px;
+    z-index: 100;     
+}
+
+.footer-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    font-family:"Segoe UI";   
+}
+
+
+.text{
+    color: rgb(252, 0, 96);
+    font-size: 15px;
+}
+ 
+.footer-social-media{
+    margin-top: 20px;
+}
+
+
+.footer-social-media a{   
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: transparent;      
+    font-size:20px;
+    width:3rem;
+    height: 3rem; 
+    margin-left:5px;    
+}
+
+.footer-social-media a:hover{
+    color:rgb(255, 0, 128) ;
+    border-color: rgb(255, 0, 128);       
+}
+
+
+.footer-pages,
+.web-projects,
+.graphic-projects{
+    margin-top: 10px;
+}
+
+.footer-pages a,
+.web-projects a,
+.graphic-projects a{
+    text-decoration: none;
+    display:grid;
+}
+
+.fotter-bottom{
+    justify-content: space-between;
+    margin-top: 100px;
+    display:flex;   
+    align-items: center;
+}
+
+.fotter-bottom p{
+    color: aliceblue;
+    font-size: 15px;
+}
+
+
+.footer-icontop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0, .1),#4e0229);
+    border: 3px solid rgb(194, 173, 186);
+    border-radius: 10px;
+}
+
+.footer-icontop a i {
+    font-size: 25px;
+    color: #ff0080;
+}
+
+/*End Of Footer Css*/
+
+/*BREAKPOINS*/
+@media (max-width:1200px){
+    html {
+        font-size: 55%;
+    }
+    
+}
+
+@media (max-width:991px){
+    html {
+        font-size: 55%;        
+    }
+    .header{
+        padding: 3rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding:10rem 3% ;
+    }
+    .social-media a{
+        border-radius: 50%;
+        font-size:30px;
+        width:5rem;
+        height: 5rem;
+    } 
+    .home-image{
+        display:none;
+    }
+    
+}
+
+@media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(0,0,57,255);
+        border-top:.1rem solid #ff0080;
+        box-shadow: 0 .5rem 1rem  rgb(148, 162, 238);
+        display: none;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .home-page{
+        flex-direction: column;       
+    }
+
+    .home-content h1{
+        margin-top: 30px;
+        font-size:30px;
+    }
+
+    .home-content h4{        
+        font-size:20px;
+    }
+
+    .home-content p{        
+        margin-top: 150px;
+        font-size:15px;
+    }
+    
+    .social-media a{
+        border-radius: 50%;
+        font-size:30px;
+        width:5rem;
+        height: 5rem;   
+        display: flex;
+        flex-direction: column;     
+        margin-bottom: 10px;
+    } 
+               
+    
+    .home-image{
+       display: flex;
+       flex-direction: row;       
+       margin-top: -480px;   
+       margin-left: -150px; 
+       
+    }
+    
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-pages,
+    .web-projects,
+    .graphic-projects,
+    .text,
+    .footer-sec{        
+        display: none;
+    }
+
+    
+}
